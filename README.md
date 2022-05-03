@@ -1,24 +1,7 @@
-# README
+# Rails_Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basic CRUD application.
 
-Things you may want to cover:
+<img width="1013" alt="preview" src="https://user-images.githubusercontent.com/64384242/166442443-4866a47b-5e2d-4ba9-8686-44dffc5bf2ab.png">
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
