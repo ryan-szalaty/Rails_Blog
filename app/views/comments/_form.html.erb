@@ -1,0 +1,21 @@
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+  <div class="control mt-6">
+    <%= form.label :commenter, class: "label mb-2" %><br>
+    <%= form.text_field :commenter, class: "input" %>
+  </div>
+  <div class="control">
+    <%= form.label :body, class: "label mb-2" %><br>
+    <%= form.text_area :body, class: "input" %>
+  </div>
+
+  <div class="control">
+    <div class="select mb-6">
+      <%= form.label :status, class: "label mb-2" %><br>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+  </div>
+
+  <div class="control my-6">
+    <%= form.submit class: "button button-gray" %>
+  </div>
+<% end %>

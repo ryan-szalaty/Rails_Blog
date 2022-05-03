@@ -1,0 +1,28 @@
+<%= render "shared/header"%>
+<div class="container">
+  <h1 class="my-6">Hello! It's currently <span class="is-italic"><%= DateTime.now.to_fs(:nice_date) %>.</span></h1>
+  <div class="columns is-multiline">
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-header is-flex is-justify-content-center">
+              <span class="is-size-4"><%= link_to article.title, article %></span>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <span class="is-clipped"><%= article.body[0..30] %>...</span>
+                <br>
+                <time>Created on <%= article.created_at.to_fs(:nice_date) %></time>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "Create New Article", new_article_path, class: "button button-gray" %>
+  <h2 class="my-6">Current number of articles: <%= Article.public_count %></h2>
+</div>
+<!--link_to uses the second argument to retrieve the proper path automatically-->
+<%= render "shared/footer"%>
